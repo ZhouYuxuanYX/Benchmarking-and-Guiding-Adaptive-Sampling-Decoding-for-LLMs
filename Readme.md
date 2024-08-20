@@ -1,4 +1,4 @@
-# An Evaluation Benchmark and User Guidline of Adaptive Sampling Decoding for LLM decoding 
+# An Evaluation Benchmark and User Guidline of Adaptive Sampling Decoding for LLMs in Open-Ended Text Generation
 
 # Data preparation
 Step 1: Build a context-preserving prefix tree from any existing dataset
