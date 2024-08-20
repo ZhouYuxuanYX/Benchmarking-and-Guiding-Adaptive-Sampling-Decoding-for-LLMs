@@ -1,4 +1,4 @@
-# An Evluation Benchmark for Truncation Sampling Decoding Strategies of LLMs
+# An Evaluation Benchmark for Truncation Sampling Decoding Strategies of LLMs
 
 # Data preparation
 ### Step 1: Build a context-preserving prefix tree from any existing dataset
