@@ -191,24 +191,12 @@ if __name__ == '__main__':
     # there are many sentences in wikitext-103 start with ['SM', 'UB', '@-@', ...]
 
     '''
-    A couple jumping off points to help you define "regular" for your project are:
-
-    a frequency metric (does this word appear at least XX% of the time in your corpus)
-    an agreement between sources (words that appear in all three of your word lists)
-    '''
-    '''
-    1) For example, https://github.com/first20hours/google-10000-english
-    This repo contains a list of the 10,000 most common English words in order of frequency, as determined by n-gram frequency analysis of the Google's Trillion Word Corpus.
-
-    2) or https://gist.github.com/h3xx/1976236
-    Wictionary top 100,000 most frequently-used English words
-    3) or https://github.com/dwyl/english-words?tab=readme-ov-file
+    https://github.com/dwyl/english-words?tab=readme-ov-file
     this one is good, because it also contains abrevations e.g., 3D, 3rd, etc
     but it maybe contains too many words, which is not good for us to select sentences which are reasonable and with common expressions.
     words.txt contains all words.
     I checked that only lower case letters are contained in words_alpha.txt
-    words_alpha.txt contains only [[:alpha:]] words (words that only have letters, no numbers or symbols). If you want a quick solution choose this.
-    words_dictionary.json contains all the words from words_alpha.txt as json format. If you are using Python, you can easily load this file and use it as a dictionary for faster performance. All the words are assigned with 1 in the dictionary.
+    words_alpha.txt contains only [[:alpha:]] words (words that only have letters, no numbers or symbols). 
     '''
     # punctuations must be included besides common words
     punctuations = [',', '.', ':', '(', ')', '\'', '\"', ';', '?', '!']
@@ -301,7 +289,7 @@ if __name__ == '__main__':
             with open('trajects_test.json', 'r') as fp:
                 trajects = json.load(fp)
         text = []
-        
+
         with ProcessPoolExecutor(max_workers=workers) as executor:
             print(f"multiprocessing: {its}")
             for r in executor.map(opt, test["text"][start:start+segment]):
