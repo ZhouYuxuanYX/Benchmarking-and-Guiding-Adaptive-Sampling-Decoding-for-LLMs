@@ -1,7 +1,7 @@
 # An Evluation Benchmark for Truncation Sampling Decoding Strategies of LLMs
 
 # Data preparation
-### Step 1: Gather the context-preserving prefix tree of any existing dataset
+### Step 1: Build a context-preserving prefix tree from any existing dataset
 ```
 python collect_prefix_tree.py
 ```
