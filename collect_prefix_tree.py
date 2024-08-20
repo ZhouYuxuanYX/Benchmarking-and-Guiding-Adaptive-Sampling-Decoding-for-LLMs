@@ -269,21 +269,21 @@ if __name__ == '__main__':
     segment = 10000
     its = 0
     trajects = {}
-    workers = 16
+    workers = 48
     length = len(test["text"])
 
     print("####### total samples #########")
-    # print(length)
+    print(length)
 
     ########## second run reached 605
     # ######## for resume from previous compute ##############
-    # # # because it exceeds 24 hours limit, we resume from 303w paragraphs
+    # # # because it exceeds 24 hours limit, we resume from 303w articles
     # start = 3030000
     # # segment must be small, otherwise reading from data will be super slow
     # # 48 processes will handle a segment together at a time !!!!!
     # segment = 10000
     # its = 303
-    # workers = 96
+    # workers = 48
     # length = len(test["text"])
 
     # # for resume
@@ -301,7 +301,7 @@ if __name__ == '__main__':
             with open('trajects_test.json', 'r') as fp:
                 trajects = json.load(fp)
         text = []
-        # 10min for 10w paragraphs, 3 times faster with 16 workers; 7min 4.5 times faster with 32 workers; 5min 6 times faster with 48 workers
+        
         with ProcessPoolExecutor(max_workers=workers) as executor:
             print(f"multiprocessing: {its}")
             for r in executor.map(opt, test["text"][start:start+segment]):
