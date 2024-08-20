@@ -1,11 +1,11 @@
 # An Evaluation Benchmark for Truncation Sampling Decoding Strategies of LLMs
 
 # Data preparation
-### Step 1: Build a context-preserving prefix tree from any existing dataset
+Step 1: Build a context-preserving prefix tree from any existing dataset
 ```
 python collect_prefix_tree.py
 ```
-### Step 2: Sort the context-preserving tree w.r.t. number of leaves of the current subtree
+Step 2: Sort the context-preserving tree w.r.t. number of leaves of the current subtree
 ```
 python sort_and_visualize_prefix_tree.py
 ```
