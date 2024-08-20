@@ -1,17 +1,14 @@
-# if without force=True, otherwise causing RuntimeError: context has already been set error
-# or put under if __name__ == '__main__':
-
 import torch.nn.functional as F
 # from gramformer import Gramformer
 import torch
 
+# if without force=True, otherwise causing RuntimeError: context has already been set error
+# or put under if __name__ == '__main__':
 # see explanation of fork, spawn and forkserver, https://bnikolic.co.uk/blog/python/parallelism/2019/11/13/python-forkserver-preload.html
 torch.multiprocessing.set_start_method("forkserver", force=True)
 torch.multiprocessing.set_sharing_strategy('file_system')
-import networkx as nx
 import os
-# must set the environment variable before importing transformers, otherwise it won't work!!!!!!!!
-# as the default one will be used first and setting it will not work!!!!!!
+# must set the environment variable before importing transformers, otherwise the default one will be used first and setting it will not work!!!!!!
 # must include huggingface, otherwise it will not find the correct token under hub
 # os.environ['HF_HOME'] = '/p/scratch/hai_recmax/cache/huggingface'
 # os.environ["TRANSFORMERS_OFFLINE"] = "1"
@@ -29,7 +26,6 @@ from nltk import tokenize
 
 import nltk
 nltk.download('punkt_tab')
-from functools import partial
 
 import json
 # language-tool-python needs to install languagetool-standalone in ~/.cache and thus causes disk quota exceeded error when installing
