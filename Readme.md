@@ -17,7 +17,7 @@ Main features:
 
 A fragment of context-preserving prefix tree:
 <p align="center">
-   <img src="tree.pdf" alt="drawing" width="450"/>
+   <img src="tree.jpg" alt="drawing" width="450"/>
 </p>
 <p align="center">
    <b>Figure 1:</b> Illustration of the EnWiki CP-Trie. For brevity, only two child nodes are shown at each depth. The number at the left side of the slash symbol refers to the branching factor at the current node, and the number at the right side refers to the total number of leaves of the sub-tree with the current node as the root node.
