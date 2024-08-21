@@ -8,10 +8,7 @@ import numpy as np
 from functools import partial
 import json
 import os
-import matplotlib.collections as mcoll
-import collections
-import itertools
-import time
+import random
 
 ##### calculate the frequencies of sub trajectories for the current node
 def get_freq(example, depth):
@@ -65,92 +62,6 @@ def dict_count(prod, c=0):
         if mykey == "leveas-0":
             c += len(prod[mykey])
     return c
-
-
-### try this to solve the hanging problem when using executor for topp varying p
-"""
-https://stackoverflow.com/questions/74633896/processpoolexecutor-using-map-hang-on-large-load
-"""
-def colorline(
-    x, y, z=None, cmap=plt.get_cmap('seismic'), norm=plt.Normalize(vmin=0, vmax=1),
-        linewidth=3, alpha=1.0, label=None):
-    """
-    http://nbviewer.ipython.org/github/dpsanders/matplotlib-examples/blob/master/colorline.ipynb
-    http://matplotlib.org/examples/pylab_examples/multicolored_line.html
-    Plot a colored line with coordinates x and y
-    Optionally specify colors in the array z
-    Optionally specify a colormap, a norm function and a line width
-    """
-
-    # Default colors equally spaced on [-1,1]:
-    # color range is -1,1 not 0,1
-    # the norm here is not for z
-    if z is None:
-        z = np.linspace(-0.8, 1, len(x))
-
-    # Special
-    # case if a single number:
-    if not hasattr(z, "__iter__"):  # to check for numerical input -- this is a hack
-        z = np.array([z])
-
-    z = np.asarray(z)
-
-    segments = make_segments(x, y)
-    if label is None:
-        lc = mcoll.LineCollection(segments, array=z, cmap=cmap, norm=norm,
-                              linewidth=linewidth, alpha=alpha)
-    else:
-        lc = mcoll.LineCollection(segments, array=z, cmap=cmap, norm=norm,
-                                  linewidth=linewidth, alpha=alpha, label=label)
-    ax = plt.gca()
-    ax.add_collection(lc)
-
-    return lc
-
-"""
-https://github.com/pytorch/pytorch/issues/83973
-Currently, when a user calls the functions torch.cuda.device_count or torch.cuda.is_available, 
-PyTorch initializes some CUDA context that prevents us to fork processes. We get the well known error message "Cannot re-initialize CUDA in forked subprocess" as demonstrated in the code below:
-"""
-# this causes gpu out of memory even with llama-7b !!!!!
-# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-# split llama into fractions to fit on multiple gpu !!!!!!!
-"""https://discuss.huggingface.co/t/how-to-load-large-model-with-multiple-gpu-cards/18522/7
-"""
-
-# this will cause dead lock
-# mp.set_start_method('spawn')
-def SeLU(x, ranges, ts):
-    # print("before")
-    # print(x)
-    x = x + ts[0]*torch.relu(ranges[0] - x) + ts[1]*torch.relu(x - ranges[1]) \
-         + ts[2]*torch.relu(ranges[2] - x) **2 + ts[3]*torch.relu(x - ranges[3])**2
-    # print("after")
-
-    # print(x)
-    # exit()
-    return x
-# # vit
-# ranges_ = np.load(f'ranges_vit.npz')
-# print(len(ranges_["arr_0"]))
-# ts_ = np.load(f'ts_vit.npz')
-
-
-# colors_multimax = plt.cm.cool(np.linspace(0, 1, 12))
-
-
-# exit()
-def make_segments(x, y):
-
-    """
-    Create list of line segments from x and y coordinates, in the correct format
-    for LineCollection: an array of the form numlines x (points per line) x 2 (x
-    and y) array
-    """
-
-    points = np.array([x, y]).T.reshape(-1, 1, 2)
-    segments = np.concatenate([points[:-1], points[1:]], axis=1)
-    return segments
 
 # this considers repeated sentences as well!!!
 # sorted_trajects = dict(sorted(trajects.items(), key=lambda item: sum(item[1].get("leaves-0", {-1:"leaves-" not in list(item[1].keys())[0]}).values()), reverse=True))
