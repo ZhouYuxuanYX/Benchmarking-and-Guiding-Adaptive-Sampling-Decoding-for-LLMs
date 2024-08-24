@@ -27,6 +27,6 @@ Illustration of a context-preserving prefix tree:
 ```
 python estimate_optimal_truncation.py
 ```
-This computes the estimation of the optimal truncation positions given different prefixes. For more details, please refer to our paper.
+This computes the estimation of the optimal truncation positions given different prefixes. For more details such as the estimation method and its corresponding rationale, please refer to our paper.
 
 # To be updated!
