@@ -23,7 +23,8 @@ Illustration of a context-preserving prefix tree:
    <b>Figure 1:</b> A fragment of the EnWiki CP-Trie. For brevity, only two child nodes are shown at each depth. The number at the left side of the slash symbol refers to the branching factor at the current node, and the number at the right side refers to the total number of leaves of the sub-tree with the current node as the root node.
 </p>
 
-# Estimate the Optimal Truncations 
+# Evaluate truncation sampling methods
+Step 1: Estimate the Optimal Truncations 
 ```
 python estimate_optimal_truncation.py
 ```
