@@ -30,8 +30,13 @@ python estimate_optimal_truncation.py
 ```
 This computes the estimation of the optimal truncation positions given different prefixes. Briefly speaking, truncation sampling is mainly based on the fact that most of the out-of-distribution tokens reside in the tail of the predicted distribution by LLMs. Therefore, the quality of the generated text is expected to be improved by excluding a proper fraction of tail from the sampling procedure. For more details such as the rationale of our estimation method, please refer to the paper.
 
-Step 2: Compute the truncations of different approaches
+Step 2: Compute the truncations of different methods
 ```
 python compute_truncation.py
 ```
+Step 3: Evaluate recall and stability at certain risk levels
+```
+python evaluate_recall_and_stability.py
+```
+
 # To be updated!
