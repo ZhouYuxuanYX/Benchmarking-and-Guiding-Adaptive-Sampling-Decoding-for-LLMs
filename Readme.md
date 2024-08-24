@@ -27,6 +27,6 @@ Illustration of a context-preserving prefix tree:
 ```
 python estimate_optimal_truncation.py
 ```
-This computes the estimation of the optimal truncation positions given different prefixes. Briefly speaking, truncation sampling is mainly based on the fact that most of the out-of-distribution tokens reside in the tail of the predicted distribution by LLMs. Therefore, the quality of the generated text is expected to be improved by explicitly excluding a proper fraction of tail from the sampling procedure. For more details such as the rationale of our estimation method, please refer to the paper.
+This computes the estimation of the optimal truncation positions given different prefixes. Briefly speaking, truncation sampling is mainly based on the fact that most of the out-of-distribution tokens reside in the tail of the predicted distribution by LLMs. Therefore, the quality of the generated text is expected to be improved by excluding a proper fraction of tail from the sampling procedure. For more details such as the rationale of our estimation method, please refer to the paper.
 
 # To be updated!
