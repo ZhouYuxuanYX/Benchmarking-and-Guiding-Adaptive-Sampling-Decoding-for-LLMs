@@ -48,4 +48,5 @@ Main features:
 
   Using transformers=4.6.0.dev0 as an example, please copy the provided files under the huggingface directory to the path `anaconda3/envs/your_environment_name/lib/python3.8/site-packages/transformers/`
 
-# Validate our evaluation results on TruthfulQA benchmark
+# Validate our results on TruthfulQA benchmark
+To be updated!
