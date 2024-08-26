@@ -46,15 +46,17 @@ Main features:
 
 # Integrate advanced sampling into Hugging Face
 
-    Using transformers=4.6.0.dev0 as an example, please copy the provided files under the huggingface directory to the path `anaconda3/envs/your_environment_name/lib/python3.8/site-packages/transformers/`. 
+    Using transformers=4.6.0.dev0 as an example, please copy the provided files under the huggingface directory to the path:
+    
+    ```anaconda3/envs/your_environment_name/lib/python3.8/site-packages/transformers/``` 
     
     The implemented methods are as follows:
     
-    - [Eta-Sampling](https://aclanthology.org/2022.findings-emnlp.249/): Set the parameter epsilon by parsing `eta` as an argument to the model.generate function.  
+    - [Eta-Sampling](https://aclanthology.org/2022.findings-emnlp.249/): Set the parameter epsilon by parsing "eta" as an argument to the model.generate function.  
     
-    - [Adaptive-Sampling](https://icml.cc/virtual/2024/poster/33683): Set the parameter epsilon by parsing `ada` as an argument to the model.generate function. 
+    - [Adaptive-Sampling](https://icml.cc/virtual/2024/poster/33683): Set the parameter epsilon by parsing "ada" as an argument to the model.generate function. 
     
-    - [Mirostat](https://openreview.net/forum?id=W1G1JZEIy5_): Set the parameter tau by parsing `mirostat` as an argument to the model.generate function. 
+    - [Mirostat](https://openreview.net/forum?id=W1G1JZEIy5_): Set the parameter tau by parsing "mirostat" as an argument to the model.generate function. 
 
   Remark: the current implementation of Adaptive Sampling and Eta-Sampling doesn't support batch computation.
 
