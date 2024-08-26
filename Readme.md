@@ -1,6 +1,6 @@
 # An Evaluation Benchmark and User Guidline of Adaptive Sampling Decoding for LLMs in Open-Ended Text Generation
 
-# Data preparation
+# Create the context-preserving prefix tree
 Step 1: Build a context-preserving prefix tree from any existing dataset
 ```
 python collect_prefix_tree.py
@@ -42,4 +42,4 @@ python evaluate_recall_and_stability.py
 ```
 This computes the two metrics of this benchmark, i.e., recall mean and risk standard error at a given average risk level, respectively. Recall mean indicates the diversity of a sampling method, while risk standard error indicates the adaptability of a sampling method. Notably, a lower risk standard error at a given risk level will lead to less amount of total risk in the auto-regressive generation process. For more details, please refer to our paper.
 
-# To be updated!
+# Integrate truncation sampling methods into HuggingFace
