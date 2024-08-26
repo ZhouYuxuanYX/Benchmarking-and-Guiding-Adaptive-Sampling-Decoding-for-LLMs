@@ -45,5 +45,6 @@ Main features:
 
 
 # Integrate advanced sampling into Hugging Face
-Using transformers=4.6.0.dev0 as an example, please follow the following procedure to integrate the advanced truncation sampling methods:
-  -  
+
+  Using transformers=4.6.0.dev0 as an example, please follow the following procedure to integrate the advanced truncation sampling methods into huggingface:
+    - copy the files under the huggingface directory into the path `anaconda3/envs/your_environment_name/lib/python3.8/site-packages/transformers/`
