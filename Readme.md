@@ -46,13 +46,13 @@ Main features:
 
 # Integrate advanced sampling into Hugging Face
 
-    Using transformers=4.6.0.dev0 as an example, please copy the provided files under the huggingface directory to the path:
+  Using transformers 4.6.0.dev0 as an example, please copy the provided files under the huggingface directory to the path:
     
     ```
     anaconda3/envs/your_environment_name/lib/python3.8/site-packages/transformers/
     ``` 
     
-    The implemented methods are as follows:
+  The implemented methods are as follows:
     
     - [Eta-Sampling](https://aclanthology.org/2022.findings-emnlp.249/): Set the parameter epsilon by parsing "eta" as an argument to the model.generate function.  
     
