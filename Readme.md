@@ -45,4 +45,5 @@ Main features:
 
 
 # Integrate advanced sampling into Hugging Face
-To be updated
+Using transformers=4.6.0.dev0 as an example, please follow the following procedure to integrate the advanced truncation sampling methods:
+  -  
