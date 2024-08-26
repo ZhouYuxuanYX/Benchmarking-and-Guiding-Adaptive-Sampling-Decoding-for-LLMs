@@ -62,5 +62,5 @@ The implemented methods are as follows:
 
 Remark: the current implementation of Adaptive Sampling and Eta-Sampling doesn't support batch computation.
 
-# Validate our results on TruthfulQA benchmark
-To be updated!
+# Main Results
+To be updated.
