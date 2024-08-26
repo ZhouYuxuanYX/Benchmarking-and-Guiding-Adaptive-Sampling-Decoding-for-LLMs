@@ -44,4 +44,4 @@ Main features:
   - **User Reference for Parameter Selection**: Step 3 additionally provides the corresponding parameters of the evaluated sampling methods at certain risk levels. Since an appropriate parameter is critical for the effectiveness of a sampling method, our evaluation results could serve as a guideline to save the efforts from the labrious trial-and-error parameter tuning in practice.  
 
 
-# Integrate advanced truncation sampling into Hugging Face
+# Integrate advanced sampling into Hugging Face
