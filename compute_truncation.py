@@ -41,8 +41,7 @@ def opt_delta_conf(i, delta_conf, index):
 def opt_eta(i, sort, index):
     # sorting is done outside to save computation
     # the small epsilon values near 0 is the critical low-risk region, so use denser grid for this region
-    vs = [i / 1e6 for i in range(1000)] + [1e-3 + i / 1e5 for i in range(0, 1000)] + [1e-2 + i * (1 - 1e-2 - 1e-3) / 1000 for i
-                                                                                     in range(0, 1000)]
+    vs = [i / 1e7 for i in range(1000)] + [1e-4 + i / 1e6 for i in range(0, 1000)] + [i / 1000 for i in range(1000)]
     epsilon = vs[i]
     eta = torch.minimum(torch.tensor(epsilon),
                         torch.sqrt(torch.tensor(epsilon)) * torch.exp(
