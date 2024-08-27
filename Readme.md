@@ -62,5 +62,5 @@ The implemented methods are as follows:
 
 Remark: the current implementation of Adaptive Sampling and Eta-Sampling doesn't support batch computation.
 
-# Main Results
+# Leaderboard
 To be updated.
