@@ -64,7 +64,7 @@ Remark: the current implementation of Adaptive Sampling and Eta-Sampling doesn't
 
 # Leaderboard
 <p align="center">
-   <img src="leaderboard.png" alt="drawing" width="450"/>
+   <img src="leaderboard.png" alt="drawing" width="750"/>
 </p>
 <p align="center">
    <b>Figure 1:</b> Risk standard error (indicating stability) and recall mean (indicating diversity) of different truncation sampling methods at different risk levels using different models. The corresponding parameter of each method at a given risk level is also provided. The best and worst scores are marked in bold and blue, respectively. For more detailed results, please refer to appendix A.1 in the paper.
