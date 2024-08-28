@@ -71,6 +71,8 @@ Remark: the current implementation of Adaptive Sampling and Eta-Sampling doesn't
    <b>Figure 1:</b> Risk standard error (indicating stability) and recall mean (indicating diversity) of different truncation sampling methods at different risk levels using different models. The corresponding parameter of each method at a given risk level is also provided. The best and worst scores are marked in bold and blue, respectively. For more detailed results, please refer to appendix A.1 in the paper.
 </p> 
 
-**Metrics**: Recall mean indicates the diversity of a sampling method, while risk standard error indicates the adaptability of a sampling method. Notably, a lower risk standard error at a given risk level will lead to less amount of total risk in the auto-regressive generation process. For more details, please refer to our paper.
+Metrics: 
+  - **Recall** Mean indicates the diversity of a sampling method.
+  - **Risk Standard Error** indicates the adaptability of a sampling method. Notably, a lower risk standard error at a given risk level will lead to less amount of total risk in the auto-regressive generation process. For more details, please refer to our paper.
 
 
