@@ -40,7 +40,8 @@ python evaluate_recall_and_stability.py
 Main features:
   - **Estimation of the Optimal Truncations**: Step 1 computes the estimation of the optimal truncation positions given different prefixes. Briefly speaking, truncation sampling is mainly based on the fact that most of the out-of-distribution tokens reside in the tail of the predicted distribution by LLMs. Therefore, the quality of the generated text is expected to be improved by excluding a proper fraction of tail from the sampling procedure. For more details such as the rationale of our estimation method, please refer to our paper. 
 
-  - **Fair Comparison**: Step 2 computes the truncation positions of different methods given different prefixes at the same average risk level. A fair evaluation is guaranteed by comparing at the same average risk level, because the evaluation results are no longer affected by hyperparameter tuning. Step 3 mainly computes the two metrics of this benchmark, i.e., recall mean and risk standard error at a given average risk level, respectively. Recall mean indicates the diversity of a sampling method, while risk standard error indicates the adaptability of a sampling method. Notably, a lower risk standard error at a given risk level will lead to less amount of total risk in the auto-regressive generation process. For more details, please refer to our paper.
+  - **Fair Comparison**: Step 2 computes the truncation positions of different methods given different prefixes at the same average risk level. A fair evaluation is guaranteed by comparing at the same average risk level, because the evaluation results are no longer affected by hyperparameter tuning. Step 3 mainly computes the two metrics of this benchmark, i.e., recall mean and risk standard error at a given average risk level, respectively.
+    
   - **User Reference for Parameter Selection**: Step 3 additionally provides the corresponding parameters of the evaluated sampling methods at certain risk levels. Since an appropriate parameter is critical for the effectiveness of a sampling method, our evaluation results could serve as a guideline to save the efforts from the labrious trial-and-error parameter tuning in practice.  
 
 
@@ -69,4 +70,7 @@ Remark: the current implementation of Adaptive Sampling and Eta-Sampling doesn't
 <p align="center">
    <b>Figure 1:</b> Risk standard error (indicating stability) and recall mean (indicating diversity) of different truncation sampling methods at different risk levels using different models. The corresponding parameter of each method at a given risk level is also provided. The best and worst scores are marked in bold and blue, respectively. For more detailed results, please refer to appendix A.1 in the paper.
 </p> 
+
+**Metrics**: Recall mean indicates the diversity of a sampling method, while risk standard error indicates the adaptability of a sampling method. Notably, a lower risk standard error at a given risk level will lead to less amount of total risk in the auto-regressive generation process. For more details, please refer to our paper.
+
 
