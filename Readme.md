@@ -19,7 +19,8 @@ The same observations can be made across model types and sizes:
 # Validation on Extrinsic Benchmarks
 To be updated!
 
-# Create the context-preserving prefix tree
+# Reproduce the Evaluation
+## Create the context-preserving prefix tree
 Step 1: Build a context-preserving prefix tree from any existing dataset
 ```
 python collect_prefix_tree.py
@@ -42,7 +43,7 @@ Illustration of a context-preserving prefix tree:
    <b>Figure 1:</b> A fragment of the EnWiki CP-Trie. For brevity, only two child nodes are shown at each depth. The number at the left side of the slash symbol refers to the branching factor at the current node, and the number at the right side refers to the total number of leaves of the sub-tree with the current node as the root node.
 </p>
 
-# Evaluate truncation sampling methods
+## Evaluate truncation sampling methods
 Step 1: Estimate the Optimal Truncations 
 ```
 python estimate_optimal_truncation.py
@@ -64,7 +65,7 @@ Main features:
   - **User Reference for Parameter Selection**: Step 3 additionally provides the corresponding parameters of the evaluated sampling methods at certain risk levels. Since an appropriate parameter is critical for the effectiveness of a sampling method, our evaluation results could serve as a guideline to save the efforts from the labrious trial-and-error parameter tuning in practice.  
 
 
-# Integrate advanced sampling into Hugging Face
+## Integrate advanced sampling into Hugging Face
 
 Using transformers 4.6.0.dev0 as an example, please copy the provided files under the huggingface directory to the path:
     
