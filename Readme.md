@@ -1,6 +1,6 @@
 # An Evaluation Benchmark and User Guidline of Adaptive Sampling Decoding for LLMs in Open-Ended Text Generation
 
-# Leaderboard
+# Leaderboard and User Reference
 <p align="center">
    <img src="leaderboard.png" alt="drawing" width="800"/>
 </p>
