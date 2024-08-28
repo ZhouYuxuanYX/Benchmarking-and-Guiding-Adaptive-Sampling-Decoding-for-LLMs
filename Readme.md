@@ -72,7 +72,7 @@ Remark: the current implementation of Adaptive Sampling and Eta-Sampling doesn't
 </p> 
 
 Metrics: 
-  - **Recall** Mean indicates the diversity of a sampling method.
+  - **Recall Mean** indicates the diversity of a sampling method.
   - **Risk Standard Error** indicates the adaptability of a sampling method. Notably, a lower risk standard error at a given risk level will lead to less amount of total risk in the auto-regressive generation process. For more details, please refer to our paper.
 
 
