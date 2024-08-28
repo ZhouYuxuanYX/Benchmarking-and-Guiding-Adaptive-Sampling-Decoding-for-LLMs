@@ -78,4 +78,6 @@ Metrics:
 The same observations can be made across model types and sizes: 
  - Considering both diversity and stability, **Adaptive sampling** and **Mirostat** are the top 2 (with similar performance) adaptive methods to be recommended, and Top-p sampling shall be the last to be considered.
  - Eta-sampling is the most sensitive (see the parameter changes) to the changes of model type and size, which might hinder its practical significance.
-  
+
+# Validation on Extrinsic Benchmarks
+To be updated!
