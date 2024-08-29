@@ -17,6 +17,8 @@ Similar observations can be made across model types and sizes:
  - Eta-sampling is the most sensitive (see the parameter changes) to the changes of model type and size, which might hinder its practical significance.
 
 # Validation on Extrinsic Benchmarks
+Our evaluation results are highly correlated with those on TruthfulQA benchmark.
+
 To be updated!
 
 # Reproduce the Evaluation Results
