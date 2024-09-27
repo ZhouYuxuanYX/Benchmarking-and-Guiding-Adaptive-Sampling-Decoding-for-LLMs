@@ -22,6 +22,9 @@ Our evaluation results are highly correlated with those on TruthfulQA benchmark.
 To be updated!
 
 # Reproduce the Evaluation Results
+
+## The contex-preserving tree is now available at [google cloud](https://drive.google.com/file/d/1KpY-9oHvgGLhgvsGr95h7xS_2PDcGiEM/view?usp=drive_link)
+
 ## Create the context-preserving prefix tree
 Step 1: Build a context-preserving prefix tree from any existing dataset
 ```
