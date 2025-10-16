@@ -1,6 +1,6 @@
 # An Evaluation Benchmark and User Guidline of Adaptive Sampling
 
-# Leaderboard and User Reference
+# Evaluation Results and User Reference
 <p align="center">
    <img src="leaderboard.png" alt="drawing" width="700"/>
 </p>
