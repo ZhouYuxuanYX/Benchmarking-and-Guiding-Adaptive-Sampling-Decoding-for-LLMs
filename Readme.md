@@ -5,7 +5,7 @@
    <img src="leaderboard.png" alt="drawing" width="700"/>
 </p>
 <p align="center">
-   <b>Figure 1:</b> Risk standard error (indicating stability) and recall mean (indicating diversity) of different truncation sampling methods at different risk levels using different models. The corresponding parameter of each method at a given risk level is also provided. The best and worst scores are marked in bold and blue, respectively. For more detailed results, please refer to appendix A.1 in the paper.
+   <b>Figure 1:</b> Risk standard error (indicating stability) and recall mean (indicating diversity) of different truncation sampling methods at different risk levels using different models. The corresponding parameter of each method at a given risk level is also provided. The best and worst scores are marked in bold and underlined, respectively. For more detailed results, please refer to appendix A.1 in the paper.
 </p> 
   
 Metrics: 
