@@ -82,3 +82,17 @@ The implemented methods are as follows:
   - [Mirostat](https://openreview.net/forum?id=W1G1JZEIy5_): Set the parameter tau by parsing "mirostat" as an argument to the model.generate function. 
 
 Remark: the current implementation of Adaptive Sampling and Eta-Sampling doesn't support batch computation.
+
+# Evaluate New Sampling Methods
+Please refer to Section 5.2 Evaluation Setup in our paper for more details.
+
+## References
+
+```bibtex
+
+@inproceedings{zhou2024balancing,
+  title        = {Balancing Diversity and Risk in LLM Sampling: How to Select Your Method and Parameter for Open-Ended Text Generation},
+  author       = {Zhou, Yuxuan and Keuper, Margret and Fritz, Mario},
+  booktitle    = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics},
+  year         = {2025}
+}
