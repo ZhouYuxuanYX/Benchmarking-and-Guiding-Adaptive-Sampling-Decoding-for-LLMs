@@ -16,11 +16,6 @@ Similar observations can be made across model types and sizes:
  - Considering both diversity and stability, **Adaptive sampling** and **Mirostat** are the top 2 (with similar performance) adaptive methods to be recommended, and Top-p sampling shall be the last to be considered.
  - Eta-sampling is the most sensitive (see the parameter changes) to the changes of model type and size, which might hinder its practical significance.
 
-# Validation on Extrinsic Benchmarks
-Our evaluation results are highly correlated with those on TruthfulQA benchmark.
-
-To be updated!
-
 # Reproduce the Evaluation Results
 
 ## The contex-preserving tree is now available at [CP-Trie](https://drive.google.com/file/d/1KpY-9oHvgGLhgvsGr95h7xS_2PDcGiEM/view?usp=drive_link)
