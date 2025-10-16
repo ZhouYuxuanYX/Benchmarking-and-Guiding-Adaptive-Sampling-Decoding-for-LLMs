@@ -1,4 +1,4 @@
-# An Evaluation Benchmark and User Guidline of Adaptive Sampling Decoding for LLMs in Open-Ended Text Generation
+# An Evaluation Benchmark and User Guidline of Adaptive Sampling Decoding
 
 # Leaderboard and User Reference
 <p align="center">
