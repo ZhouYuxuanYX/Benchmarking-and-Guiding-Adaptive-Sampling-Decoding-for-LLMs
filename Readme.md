@@ -1,4 +1,4 @@
-# An Evaluation Benchmark and User Guidline of Adaptive Sampling Decoding
+# An Evaluation Benchmark and User Guidline of Adaptive Sampling
 
 # Leaderboard and User Reference
 <p align="center">
